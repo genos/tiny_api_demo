@@ -2,7 +2,7 @@
 
 This tiny demonstration serves HTML to a web browser and JSON over a REST endpoint, using the [Flask](https://flask.palletsprojects.com/) microframework to handle the details. You can read more about this [on my blog](https://grahamenos.com/api-tiny-demo.html).
 
-# Do not use this!
+## Do not use this!
 
 As the blog post says,
 
