@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from flask import Flask, jsonify, render_template
+from flask import Flask, escape, jsonify, render_template
 from data import NAMES, SELECT
 
 app = Flask(__name__)
@@ -13,15 +13,17 @@ def home():
 
 @app.route("/person/<string:name>")
 def person(name):
+    clean = escape(name)
     try:
-        return render_template("person.html", name=name, data=SELECT[name], error=False)
+        return render_template("person.html", name=clean, data=SELECT[clean], error=False)
     except KeyError:
-        return render_template("person.html", name=name, error=True), 400
+        return render_template("person.html", name=clean, error=True), 400
 
 
 @app.route("/api/<string:name>")
 def api(name):
+    clean = escape(name)
     try:
-        return jsonify(SELECT[name])
+        return jsonify(SELECT[clean])
     except KeyError:
-        return {"error": f"Unknown person {name}"}, 400
+        return {"error": f"Unknown person {clean}"}, 400
