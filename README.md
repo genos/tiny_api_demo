@@ -1,6 +1,6 @@
 # Tiny Demo REST API in Python
 
-This tiny demonstration serves HTML to a web browser and JSON over a REST endpoint, using the [Flask](https://flask.palletsprojects.com/) microframework to handle the details. You can read more about this [on my blog](https://grahamenos.com/api-tiny-demo.html).
+This tiny demonstration serves HTML to a web browser and JSON over a REST endpoint, using the [Flask](https://flask.palletsprojects.com/) microframework to handle the details. You can read more about this [on my blog](https://grahamenos.com/tiny-api-demo.html).
 
 ## Do not use this!
 
